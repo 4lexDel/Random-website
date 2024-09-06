@@ -1,3 +1,4 @@
+import Form from "../components/Form/Form";
 import Palette from "../components/Palette/Palette";
 
 function HomePage() {
@@ -38,6 +39,8 @@ function HomePage() {
             </h3>
 
             <Palette></Palette>
+
+            <Form></Form>
         </section>
     );
 }
