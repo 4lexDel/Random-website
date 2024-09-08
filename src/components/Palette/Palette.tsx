@@ -5,6 +5,7 @@ function Palette() {
             <div className="w-24 h-24 bg-secondary flex justify-center items-center text-text">secondary</div>
             <div className="w-24 h-24 bg-accent flex justify-center items-center text-text">accent</div>
             <div className="w-24 h-24 bg-info flex justify-center items-center text-text">info</div>
+            <div className="w-24 h-24 dark:bg-white bg-black flex justify-center items-center text-text">tailwindcss</div>
         </div>
     );
 }
