@@ -1,7 +1,11 @@
+import { useState } from "react";
 import Form from "../components/Form/Form";
+import Modal from "../components/Modal/Modal";
 import Palette from "../components/Palette/Palette";
 
 function HomePage() {
+    const [isOpen, setIsOpen] = useState(true);
+
     return (
         <section id="home" className="container p-4 mx-auto py-20 text-center">
             <h2 className="text-5xl font-bold font-heading text-primary mb-6">
@@ -207,6 +211,8 @@ function HomePage() {
                     </tbody>
                 </table>
             </div>
+
+            <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}></Modal>
         </section>
     );
 }
