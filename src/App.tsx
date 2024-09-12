@@ -1,4 +1,5 @@
 import Header from './components/Header/Header';
+import Responsive from './components/Responsive/Responsive';
 import HomePage from './pages/HomePage';
 
 function App() {
@@ -7,7 +8,10 @@ function App() {
   return (
     <div className="bg-background text-text font-body">
       <Header></Header>
-      <HomePage></HomePage>
+
+      <br />
+      <Responsive></Responsive>
+      {/* <HomePage></HomePage> */}
     </div>
   );
 }
