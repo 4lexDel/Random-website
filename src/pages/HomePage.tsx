@@ -8,9 +8,9 @@ function HomePage() {
 
     return (
         <section id="home" className="container p-4 mx-auto py-20 text-center">
-            <h1 className="mb-4 text-5xl font-bold font-heading text-text md:text-5xl lg:text-6xl">
+            <h1 className="flex justify-center flex-wrap mb-4 text-5xl font-bold font-heading text-text md:text-5xl lg:text-6xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r to-info from-primary">Random</span> 
-                Website
+                <span>Website</span>
             </h1> 
            
 
@@ -214,7 +214,7 @@ function HomePage() {
                 </table>
             </div>
 
-            <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} onSubmit={() => console.log("OK")}></Modal>
+            {/* <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} onSubmit={() => console.log("OK")}></Modal> */}
         </section>
     );
 }

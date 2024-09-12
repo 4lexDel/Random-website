@@ -10,7 +10,7 @@ function App() {
       <Header></Header>
 
       <br />
-      {/* <Responsive></Responsive> */}
+      <Responsive></Responsive>
       <HomePage></HomePage>
     </div>
   );

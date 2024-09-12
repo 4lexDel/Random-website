@@ -30,15 +30,16 @@ function Header() {
             <nav className="bg-background border-b items-center
             grid grid-cols-8 lg:place-items-center">
                 <a href="" className="flex items-center m-3 
-                lg:col-span-1
-                sm:col-span-2
+                xl:col-span-1
+                md:col-span-2
+                sm:col-span-4
                 col-span-4 justify-self-start order-1">
                     <img src="https://pagepro.co/blog/wp-content/uploads/2020/04/react-1024x912.png" width="40px" className="m-3" alt="Logo" />
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Random</span>
                 </a>
                 <div className={`justify-between items-center
                 xl:col-span-4
-                lg:col-span-6 lg:justify-self-center lg:flex lg:order-2
+                lg:col-span-5 lg:justify-self-center lg:flex lg:order-2
                 sm:col-span-8 sm:justify-self-end
                 ${isMenuOpen ? "" : "hidden"} col-span-8 justify-self-end order-6`}>
                     <ul className="flex flex-col text-xl lg:flex-row">
@@ -63,7 +64,7 @@ function Header() {
                     </ul>
                 </div>
                 <button onClick={toggleDarkMode} className="size-fit text-text font-bold p-2 rounded-full border border-text
-                sm:justify-self-center sm:col-span-1
+                md:justify-self-center md:col-span-1
                 col-span-4 order-3 justify-self-end mr-3">
                     {darkMode ?
                         <svg id="theme-toggle-dark-icon" className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -75,22 +76,23 @@ function Header() {
                         </svg>
                     }
                 </button>
-                <div className="flex items-center gap-3 pb-2
-                xl:col-span-2 
-                lg:col-span-8 lg:justify-self-center
-                sm:ml-0
-                col-span-4 justify-self-start order-4 ml-3 mr-3">
-                    <button className="bg-secondary text-text font-bold py-3 px-8 rounded">
-                        Documentation
+                <div className="flex flex-wrap items-center gap-3 pb-2 pt-2
+                xl:col-span-2 xl:justify-self-end
+                lg:col-span-8 lg:justify-self-center lg:ml-0
+                md:col-span-4
+                col-span-6 justify-self-start order-4 ml-3 mr-3">
+                    <button className="bg-secondary text-text text-md font-bold py-3 px-8 rounded w-32">
+                        Doc
                     </button>
-                    <button className="bg-primary text-text font-bold py-3 px-8 rounded text-nowrap">
+                    <button className="bg-primary text-text font-bold py-3 px-8 rounded text-nowrap w-32">
                         Get Started
                     </button>
                 </div>
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)}  className="size-fit inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
                 lg:hidden 
-                sm:inline-flex sm:col-span-1 sm:justify-self-center
-                col-span-4 order-5 justify-self-end mr-3">
+                md:col-span-1
+                sm:inline-flex sm:col-span-2 sm:justify-self-end
+                col-span-2 order-5 justify-self-end mr-3">
                     <span className="sr-only">Open main menu</span>
                     {!isMenuOpen ? 
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>

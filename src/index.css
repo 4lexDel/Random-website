@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,8 +14,7 @@
 }
 
 @layer base {
-  :root {
-    
+  :root {    
     --text: #0a0605;
     --text-50: #f6f0ee;
     --text-100: #eee0dd;
