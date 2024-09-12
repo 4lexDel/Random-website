@@ -27,8 +27,8 @@ function Modal({isOpen, onClose, onSubmit}: {isOpen: boolean, onClose: MouseEven
                                 </p>
                             </div>
                             <div className="flex justify-end items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                <button onClick={(e) => {onClose(e); onSubmit(e);}} type="button" className="text-text bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                                <button onClick={onClose} type="button" className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                                <button onClick={(e) => {onClose(e); onSubmit(e);}} type="button" className="text-text bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-800">I accept</button>
+                                <button onClick={onClose} type="button" className="py-2.5 px-5 ms-3 text-sm font-medium text-text focus:outline-none bg-secondary rounded-lg border border-gray-200 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:border-gray-600">Decline</button>
                             </div>
                         </div>
                     </div>
