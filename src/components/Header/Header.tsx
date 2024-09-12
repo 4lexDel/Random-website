@@ -81,7 +81,7 @@ function Header() {
                 lg:col-span-8 lg:justify-self-center lg:ml-0
                 md:col-span-4
                 col-span-6 justify-self-start order-4 ml-3 mr-3">
-                    <button className="bg-secondary text-text text-md font-bold py-3 px-8 rounded w-32">
+                    <button className="bg-info text-text text-md font-bold py-3 px-8 rounded w-32">
                         Doc
                     </button>
                     <button className="bg-primary text-text font-bold py-3 px-8 rounded text-nowrap w-32">
