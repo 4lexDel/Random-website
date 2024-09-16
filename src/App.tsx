@@ -2,20 +2,24 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage';
 import IdePage from './pages/IdePage';
+import { ThemeContext } from './Contexts/ThemeContext';
+import { useState } from 'react';
 
 function App() {
-
+  const [theme, setTheme] = useState('light');
 
   return (
     <div className="app bg-background text-text font-body h-screen flex flex-col">
       <Router>
-        <Header></Header>
+        <Header onThemeToggle={(theme: string) => setTheme(theme)}></Header>
         
-        <Routes>
-          <Route path='/' element={<HomePage/>}/>
-          <Route path='/home' element={<HomePage/>}/>
-          <Route path='/ide' element={<IdePage/>}/>
-        </Routes>
+        <ThemeContext.Provider value={theme}>
+          <Routes>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='/home' element={<HomePage/>}/>
+            <Route path='/ide' element={<IdePage/>}/>
+          </Routes>
+        </ThemeContext.Provider>
       </Router>
     </div>
   );

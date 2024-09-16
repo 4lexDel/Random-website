@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Header() {
+function Header({onThemeToggle}: any) {
     const [darkMode, setDarkMode] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -10,7 +10,9 @@ function Header() {
         if (savedTheme === 'true') {
             setDarkMode(true);
             document.documentElement.classList.add('dark');
+            onThemeToggle("dark");
         }
+        else onThemeToggle("light");
     }, []);
 
     // Function to toggle dark mode
@@ -19,9 +21,11 @@ function Header() {
         if (!darkMode) {
             document.documentElement.classList.add('dark');
             localStorage.setItem('darkMode', 'true');
+            onThemeToggle("dark");
         } else {
             document.documentElement.classList.remove('dark');
             localStorage.setItem('darkMode', 'false');
+            onThemeToggle("light");
         }
     };
 

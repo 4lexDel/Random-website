@@ -1,4 +1,6 @@
 import Editor from "@monaco-editor/react";
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "../../Contexts/ThemeContext";
 
 function Code() {
   const code = `
@@ -9,11 +11,14 @@ function test(a: number, b: number):number {
     return a+b;
 }
   `;
+
+  const theme = useContext(ThemeContext);
+
   return (
     <Editor
       height="100%"
       language="typescript"
-      theme="vs-dark"
+      theme={"vs-"+theme}
       value={code}
       options={{
         // inlineSuggest: true,
