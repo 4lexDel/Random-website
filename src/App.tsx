@@ -1,17 +1,22 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Responsive from './components/Responsive/Responsive';
 import HomePage from './pages/HomePage';
+import IdePage from './pages/IdePage';
 
 function App() {
 
 
   return (
-    <div className="bg-background text-text font-body">
-      <Header></Header>
-
-      <br />
-      {/* <Responsive></Responsive> */}
-      <HomePage></HomePage>
+    <div className="app bg-background text-text font-body h-screen flex flex-col">
+      <Router>
+        <Header></Header>
+        
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/home' element={<HomePage/>}/>
+          <Route path='/ide' element={<IdePage/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
