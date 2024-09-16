@@ -1,6 +1,7 @@
 function Responsive() {
     return(
         <>
+            <div className="hidden xs:flex bg-blue-100 p-2 text-sm">xs</div>
             <div className="hidden sm:flex bg-primary p-2 text-sm">sm</div>
             <div className="hidden md:flex bg-secondary p-2 text-md">md</div>
             <div className="hidden lg:flex bg-primary p-2 text-lg">lg</div>
