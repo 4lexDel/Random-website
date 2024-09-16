@@ -6,7 +6,7 @@ var speed = 5;
 
 function World() {
     const setup = (p5: any, canvasParentRef: any) => {
-        p5.createCanvas(500, 400).parent(canvasParentRef);
+        const cnv = p5.createCanvas(500, 400).parent(canvasParentRef);
     }
 
     const draw = (p5: any) => {
@@ -30,7 +30,11 @@ function World() {
     }
 
     return (
-        <Sketch setup={setup} draw={draw} />
+        <Sketch 
+            setup={setup} 
+            draw={draw} 
+            mousePressed={((event: any) => {console.log(`x=${event.mouseX} | y=${event.mouseY}`)})} 
+        />
     )
 }
 
